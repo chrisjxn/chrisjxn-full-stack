@@ -1,0 +1,10 @@
+.Private {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.avatar {
+    width: 200px;
+}
