@@ -19,3 +19,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+// note I dropped the database table so this app won't work anymore until I recreate the database. See completed example (full-stack-auth-example) for the SQL table to create. Everything should work again after that

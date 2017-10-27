@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const initialState = {
-    user: {}
+    user: {},
 }
 
 const GET_USER_INFO = 'GET_USER_INFO';
