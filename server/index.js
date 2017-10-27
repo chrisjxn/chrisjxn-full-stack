@@ -9,7 +9,7 @@ const express = require('express')
 const app = express();
 app.use(bodyParser.json());
 app.use(session({
-    secret: process.env.secret,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true
 }))
@@ -70,7 +70,7 @@ app.get('/auth/me', (req, res) => {
 })
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(308, 'http://localhost:3000/');
+    res.redirect('http://localhost:3000/');
 })
 
 
