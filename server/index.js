@@ -32,6 +32,7 @@ passport.use(new Auth0Strategy({
     // then invoke done with new user's id
     const db = app.get('db');
     const userData = profile._json;
+    console.log(userData);
     db.find_user([userData.identities[0].user_id]).then(user => {
         if (user[0]) {
             return done(null, user[0].id);
@@ -70,12 +71,8 @@ app.get('/auth/me', (req, res) => {
 })
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://chrisjxn.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000/');
 })
-
-
-
-
 
 const PORT = 3005;
 app.listen(PORT, console.log(`Server listening on port ${PORT}`));
