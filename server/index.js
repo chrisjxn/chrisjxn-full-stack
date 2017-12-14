@@ -72,6 +72,7 @@ app.get('/auth/me', (req, res) => {
 app.get('/auth/logout', (req, res) => {
     req.logOut();
     res.redirect('https://chrisjxn.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000/');
+    // see https://auth0.com/docs/logout for more information about this redirect url and the corresponding change needed in Auth0 Tenant Settings
 })
 
 const PORT = 3005;
